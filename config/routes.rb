@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  resources :images
+
+  devise_for :users
+  devise_for :installs
+  get 'admin/page_one'
+
+  get 'admin/page_two'
+
+  get 'sitemap/index'
+
+  get 'gallery/index'
+
   get 'news/index'
 
   get 'resume/index'
@@ -11,7 +23,10 @@ Rails.application.routes.draw do
 
   get 'aboutme/index', to: "aboutme#index"
 
-  get 'welcome', to: "welcome#index"
+  get 'welcome',
+   to: "welcome#index",
+   as: 'welcome_page'
+   
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

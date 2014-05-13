@@ -1,0 +1,27 @@
+<h1> Restricted Access Page <h1>
+
+<% if @first_visit == true %>
+	<h1>WELCOME TO MY SITE<h1>
+<% end %>
+
+<% if @first_visit == false %>
+	<h1> THANK YOU FOR VISITING AGAIN <h1>
+<% end %>
+
+
+
+<%= form_tag("/say_hi") do %>
+<%= label_tag('my_name', "Your Name:")%>
+<%= text_field_tag('My Name')%>
+<%= label_tag('my password', 'Your Password')%>
+<%= text_field_tag('my_password')%>
+<%= submit_tag("Submit")%>
+
+<% end %>
+
+
+</ul>
+
+<style>
+img {width: 20%;}
+</style>

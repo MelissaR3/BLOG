@@ -1,0 +1,33 @@
+
+
+<hi> THIS IS MY ONE BIG HAPPY FAMILY <h1>
+	<style>
+img {width: 50%;}
+</style>
+	<h2> Tatum, Colby, Phoebe, PJ and Mommy <h2>
+	<style>
+img {width: 50%;}
+</style>
+
+
+
+<hr/> 
+
+
+
+
+
+<% @images.each do |image_record| %>
+<li>
+
+	<%= image_tag( image_record.file_name ) %>
+	<%= image_record.name %> - <%= image_record.description %>
+</li>
+	<% end %>
+
+
+</ul>
+
+<style>
+img {width: 10%;}
+</style>

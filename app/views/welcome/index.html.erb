@@ -1,5 +1,31 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
 
+
+<% if user_signed_in? && !current_user.admin %>
+<%= form_tag("/say_hi") do %>
+<%= label_tag('my password', 'Your Admin Password')%>
+<%= text_field_tag('my_password')%>
+<%= submit_tag("Submit")%>
+<%end%>
+<% end %>
+
+<h1> HELLO EVERYONE <h1>
+
+<% if @first_visit == true %>
+	<h1>WELCOME TO MY SITE<h1>
+<% end %>
+
+<% if @first_visit == false %>
+	<h1> THANK YOU FOR VISITING <h1>
+<% end %>
+
+<hi> 
+	<% if @first_visit %>
+	<% end %>
+
+</ul>
+
+<style>
+img {width: 20%;}
+</style>
 
 
